@@ -66,12 +66,18 @@ Kullanılan modeller:
 
 ---
 
-## 📥 Dataset
+##  Dataset
 
 Bu projede kullanılan veri seti, farklı hava koşullarını temsil eden görsellerden oluşmaktadır.  
 Veri setine aşağıdaki link üzerinden ulaşabilirsiniz:
 
 🔗 [Multiclass Weather Dataset – Kaggle](https://www.kaggle.com/datasets/pratik2901/multiclass-weather-dataset)
+
+##  Proje Sunumu (YouTube)
+
+Projenin detaylı anlatımını içeren sunum videosuna aşağıdaki bağlantıdan ulaşabilirsiniz:
+
+🔗 https://www.youtube.com/YOUTUBE_VIDEO_LINKI
 
 
 
