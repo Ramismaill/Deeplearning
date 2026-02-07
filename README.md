@@ -1,84 +1,72 @@
-# FET312 - Derin Öğrenme Projesi: [Görüntülerden Hava Durumu Tespiti (Weather Classification)]
+# ☁️ Weather Classification from Images using Deep Learning
 
-**Ders:** FET312 Derin Öğrenme  
-**Dönem:** 2025-2026 Güz  
+**Course:** FET312 – Deep Learning  
+**Semester:** Fall 2025–2026  
 
-##  Ekip Bilgileri
+### 👥 Team DevDL
 
-**Ekip Adı:** [DevDL]
-
-| Adı Soyadı | Öğrenci No | E-Posta | Kullanılan Model |
-|-----------|-----------|--------|------------------|
-| Mehmet Oytun ÖZER | 23040301043  | mehmetoytunozer@stu.topkapi.edu.tr | VGG16 - MobileNetV2 |
-| Furkan Işık | 23040301063 | furkanisik1@stu.topkapi.edu.tr | ResNet50 - InceptionV3 |
-| Ram Ismail  | 24040301052 | ramismail@stu.topkapi.edu.tr | EfficientNetB0 - EfficientNetB4 |
-| Muhammet Ay | 23040301137 | muhammetay@stu.topkapi.edu.tr | DenseNet121 - RegNetX-8GF |
-
-
-
-##  Proje Açıklaması
-
-Bu proje, görüntülerden hava durumunu (güneşli, yağmurlu, bulutlu ve gün doğumu) 
-otomatik olarak tespit edebilen bir derin öğrenme modeli geliştirmeyi amaçlamaktadır.
-
-Günlük hayatta hava tahmini çoğunlukla sensör ve radar tabanlı sistemler kullanılarak 
-gerçekleştirilmektedir. Bu çalışmada ise yalnızca görsel veriler 
-(sosyal medya fotoğrafları, uydu görüntüleri ve trafik kameraları gibi) kullanılarak, 
-sensörsüz bir hava durumu tahmin yaklaşımı sunulmaktadır.
-
-Modeller, Evrişimli Sinir Ağları (CNN) ve transfer learning yöntemleri kullanılarak 
-VGG16, MobileNetV2, ResNet50, InceptionV3, EfficientNetB0, EfficientNetB4, 
-DenseNet121 ve RegNetX-8GF mimarileri ile eğitilmiştir.  
-Model performansı Accuracy, Precision, Recall ve F1-score metrikleri ile değerlendirilmiştir.
-
-Bu sistemin; enerji planlaması, tarım uygulamaları ve çevresel gözlem 
-gibi alanlarda görsel tabanlı hava durumu analizine katkı sağlaması hedeflenmektedir.
-
-Kullanılan modeller:
-- VGG16
-- MobileNetV2
-- ResNet50
-- InceptionV3
-- EfficientNetB0
-- EfficientNetB4
-- DenseNet121
-- RegNetX-8G
+| Name | Student ID | Model Focus |
+| :--- | :--- | :--- |
+| **Mehmet Oytun Özer** | 23040301043 | VGG16, MobileNetV2 |
+| **Furkan Işık** | 23040301063 | ResNet50, InceptionV3 |
+| **Ram Ismail** | 24040301052 | EfficientNetB0, EfficientNetB4 |
+| **Muhammet Ay** | 23040301137 | DenseNet121, RegNetX-8GF |
 
 ---
 
-##  Kullanılan Teknolojiler
+## 🌤️ About the Project
 
-- Python
-- PyTorch / TensorFlow
-- NumPy
-- Matplotlib
-- Scikit-learn
+In this project, we tried to answer a simple but interesting question:  
+**Can a computer understand the weather just by looking at a photo?**
 
----
+Instead of using sensors or weather stations, we focused only on image data. The goal was to train deep learning models that can recognize four weather conditions:
 
-##  Değerlendirme Metrikleri
+* ☀️ **Sunny**
+* 🌧️ **Rainy**
+* ☁️ **Cloudy**
+* 🌅 **Sunrise**
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
+We used **Convolutional Neural Networks (CNNs)** with transfer learning, because training large models from scratch would require much more data and computing power than we have. By using pretrained networks, we could focus more on fine-tuning and comparing performance.
 
+Each team member worked on different model architectures, and we compared results to see which type of network performs best for visual weather recognition.
 
 ---
 
-##  Dataset
+## 🧠 Models We Tested
 
-Bu projede kullanılan veri seti, farklı hava koşullarını temsil eden görsellerden oluşmaktadır.  
-Veri setine aşağıdaki link üzerinden ulaşabilirsiniz:
+Instead of relying on a single architecture, we experimented with **eight well-known CNN models**:
 
-🔗 [Multiclass Weather Dataset – Kaggle](https://www.kaggle.com/datasets/pratik2901/multiclass-weather-dataset)
+* **VGG16**
+* **MobileNetV2**
+* **ResNet50**
+* **InceptionV3**
+* **EfficientNetB0**
+* **EfficientNetB4**
+* **DenseNet121**
+* **RegNetX-8GF**
 
-##  Proje Sunumu (YouTube)
+Some models were lightweight and fast (like **MobileNet**), while others were deeper and more complex (like **EfficientNetB4** and **RegNetX**). This helped us understand the trade-off between accuracy and computational cost.
 
-Projenin detaylı anlatımını içeren sunum videosuna aşağıdaki bağlantıdan ulaşabilirsiniz:
+---
 
+## 🛠 Tools & Technologies
 
-🔗 https://www.youtube.com/watch?v=qSmodlwP2H8
+We built the project using:
+* **Python** for all development
+* **PyTorch / TensorFlow** for deep learning
+* **NumPy** for data handling
+* **Matplotlib** for visualization
+* **Scikit-learn** for evaluation metrics
 
+---
 
+## 📊 How We Evaluated the Models
 
+To compare performance fairly, we used several metrics:
+
+* **Accuracy** – overall correctness
+* **Precision** – how reliable the model’s positive predictions are
+* **Recall** – how well the model detects all examples of a class
+* **F1-Score** – balance between precision and recall
+
+These metrics helped us see not just which model is “most correct,” but which one handles class differences better.
